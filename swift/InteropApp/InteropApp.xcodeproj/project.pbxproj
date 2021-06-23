@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -159,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B43903662682E488007ED1C9 /* Build configuration list for PBXNativeTarget "InteropApp" */;
 			buildPhases = (
+				B43903792683354B007ED1C9 /* Run build.sh */,
 				B439033C2682E485007ED1C9 /* Sources */,
 				B439033D2682E485007ED1C9 /* Frameworks */,
 				B439033E2682E485007ED1C9 /* Resources */,
@@ -281,6 +282,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B43903792683354B007ED1C9 /* Run build.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run build.sh";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../../\n./build.sh || exit 1\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B439033C2682E485007ED1C9 /* Sources */ = {
