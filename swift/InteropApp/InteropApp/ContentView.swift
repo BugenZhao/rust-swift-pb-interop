@@ -15,7 +15,7 @@ func greeting(_ verb: String, _ name: String) -> String {
     let req = Request.with {
         $0.greeting = greetingReq
     }
-    let res: GreetingResponse = rustCall(req)
+    let res: GreetingResponse = try! rustCall(req)
     return res.text
 }
 
@@ -40,7 +40,7 @@ func backtrace(sync: Bool, closure: @escaping (String) -> Void) {
         }
     }
     if sync {
-        let res: BacktraceResponse = rustCall(req)
+        let res: BacktraceResponse = try! rustCall(req)
         closure(res.text)
     } else {
         rustCallAsync(req) { (res: BacktraceResponse) in closure(res.text) }

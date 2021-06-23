@@ -1,6 +1,7 @@
-use crate::{async_handlers::*, protos::DataModel::*, ByteBuffer};
+use crate::{async_handlers::*, error::any_err_to_string, protos::DataModel::*, ByteBuffer};
+use futures::prelude::*;
 use lazy_static::lazy_static;
-use std::{ffi::c_void, mem, thread};
+use std::{ffi::c_void, mem, panic, thread};
 use tokio::runtime::Runtime;
 
 lazy_static! {
@@ -36,20 +37,31 @@ impl Drop for RustCallback {
     }
 }
 
+macro_rules! catch_await {
+    ($e: expr) => {
+        panic::AssertUnwindSafe($e).catch_unwind().await
+    };
+}
+
 pub fn dispatch_request_async(req: Request, callback: RustCallback) {
     RUNTIME.spawn(async move {
         println!("rust: serving async request on {:?}", thread::current());
 
         use Request_oneof_async_req::*;
         let response = match req.async_req.expect("no async req") {
-            sleep(r) => handle_sleep(r).await,
-            async_backtrace(r) => handle_backtrace(r).await,
+            sleep(r) => catch_await!(handle_sleep(r)),
+            async_backtrace(r) => catch_await!(handle_backtrace(r)),
         };
 
-        let mut response_buf = Vec::with_capacity(response.compute_size() as usize + 1);
-        response.write_to_vec(&mut response_buf).unwrap();
+        let result = response
+            .map(|response| {
+                let mut response_buf = Vec::with_capacity(response.compute_size() as usize + 1);
+                response.write_to_vec(&mut response_buf).unwrap();
+                response_buf
+            })
+            .map_err(any_err_to_string);
 
-        let byte_buffer = ByteBuffer::from(response_buf);
+        let byte_buffer = ByteBuffer::from(result);
         callback.run(byte_buffer);
     });
 }
