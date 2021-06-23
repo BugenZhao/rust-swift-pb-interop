@@ -82,9 +82,8 @@ struct ContentView: View {
                         .frame(width: 16.0, height: 16.0)
                         .progressViewStyle(CircularProgressViewStyle())
                         .scaleEffect(0.5)
-                } else {
-                    Text(awakeMessage ?? "...")
                 }
+                Text(awakeMessage ?? "...")
             }
             HStack(alignment: .top) {
                 VStack {

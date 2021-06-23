@@ -1,6 +1,6 @@
 use crate::{async_handlers::*, protos::DataModel::*, ByteBuffer};
 use lazy_static::lazy_static;
-use std::{ffi::c_void, mem};
+use std::{ffi::c_void, mem, thread};
 use tokio::runtime::Runtime;
 
 lazy_static! {
@@ -38,6 +38,8 @@ impl Drop for RustCallback {
 
 pub fn dispatch_request_async(req: Request, callback: RustCallback) {
     RUNTIME.spawn(async move {
+        println!("rust: serving async request on {:?}", thread::current());
+
         use Request_oneof_async_req::*;
         let response = match req.async_req.expect("no async req") {
             sleep(r) => handle_sleep(r).await,

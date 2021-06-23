@@ -1,7 +1,10 @@
 use crate::protos::DataModel::*;
 use crate::sync_handlers::*;
+use std::thread;
 
 pub fn dispatch_request(req: Request) -> Vec<u8> {
+    println!("rust: serving sync request on {:?}", thread::current());
+
     use Request_oneof_sync_req::*;
     let response = match req.sync_req.expect("no sync req") {
         greeting(r) => handle_greeting(r),
