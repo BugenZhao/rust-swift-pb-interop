@@ -30,7 +30,6 @@ private class WrappedDataCallback {
     }
 }
 
-
 func rustCallAsync<Response: SwiftProtobuf.Message>(_ request: Request, closure: @escaping (Response) -> Void) {
     let dataCallback = WrappedDataCallback({ (resData: Data) in
         let res = try! Response(serializedData: resData)
@@ -45,6 +44,9 @@ func rustCallAsync<Response: SwiftProtobuf.Message>(_ request: Request, closure:
 
     let dataCallbackPtr = Unmanaged.passRetained(dataCallback).toOpaque()
     let rustCallback = RustCallback(user_data: dataCallbackPtr, callback: byteBufferCallback)
+    withUnsafePointer(to: rustCallback) { ptr in
+        print("swift: allocate \(rustCallback) at \(ptr)")
+    }
 
     let reqData = try! request.serializedData()
     reqData.withUnsafeBytes { ptr -> Void in

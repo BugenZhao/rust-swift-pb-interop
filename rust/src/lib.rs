@@ -53,6 +53,7 @@ pub unsafe extern "C" fn rust_call(data: *const u8, len: usize) -> ByteBuffer {
 /// totally unsafe
 #[no_mangle]
 pub unsafe extern "C" fn rust_call_async(data: *const u8, len: usize, callback: RustCallback) {
+    println!("rust: get {:?} at {:?}", callback, &callback as *const _);
     let request = parse_from_raw(data, len);
     println!("rust: async request {:?}", request);
     dispatch_request_async(request, callback);

@@ -8,6 +8,7 @@ lazy_static! {
 }
 
 #[repr(C)]
+#[derive(Debug)]
 pub struct RustCallback {
     pub user_data: *const c_void,
     pub callback: extern "C" fn(*const c_void, ByteBuffer),
@@ -26,6 +27,12 @@ impl RustCallback {
 
     pub fn run(self, byte_buffer: ByteBuffer) {
         (self.callback)(self.user_data, byte_buffer)
+    }
+}
+
+impl Drop for RustCallback {
+    fn drop(&mut self) {
+        println!("rust: {:?} at {:?} dropped!", self, &self as *const _)
     }
 }
 
