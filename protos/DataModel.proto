@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Request {
+  oneof request { GreetingRequest greeting = 1; }
+}
+
+message GreetingRequest {
+  string verb = 1;
+  string name = 2;
+}
+
+message GreetingResponse { string text = 1; }
