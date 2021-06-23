@@ -31,6 +31,21 @@ func sleep(seconds: Int, closure: @escaping (String) -> Void) {
     }
 }
 
+func backtrace(sync: Bool, closure: @escaping (String) -> Void) {
+    let req = Request.with {
+        if (sync) {
+            $0.syncBacktrace = BacktraceRequest()
+        } else {
+            $0.asyncBacktrace = BacktraceRequest()
+        }
+    }
+    if sync {
+        let res: BacktraceResponse = rustCall(req)
+        closure(res.text)
+    } else {
+        rustCallAsync(req) { (res: BacktraceResponse) in closure(res.text) }
+    }
+}
 
 struct ContentView: View {
     @State private var verb = "Hello"
@@ -38,6 +53,7 @@ struct ContentView: View {
     @State private var sleepTime = 3
     @State private var awakeMessage: String? = nil
     @State private var sleeping = false
+    @State private var backtraceText = ""
 
     var body: some View {
         let greet = greeting($verb.wrappedValue, $name.wrappedValue)
@@ -69,6 +85,22 @@ struct ContentView: View {
                 } else {
                     Text(awakeMessage ?? "...")
                 }
+            }
+            HStack(alignment: .top) {
+                VStack {
+                    Button("sync backtrace") {
+                        backtrace(sync: true) { text in
+                            backtraceText = text
+                        }
+                    }
+                    Button("async backtrace") {
+                        backtrace(sync: false) { text in
+                            backtraceText = text
+                        }
+                    }
+                }
+                TextField("", text: $backtraceText)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }.padding()
     }

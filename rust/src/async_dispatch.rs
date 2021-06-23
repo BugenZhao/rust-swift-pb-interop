@@ -30,13 +30,12 @@ impl RustCallback {
 }
 
 pub fn dispatch_request_async(req: Request, callback: RustCallback) {
-    use Request_oneof_async_req::*;
-    let task = || match req.async_req.expect("no async req") {
-        sleep(r) => handle_sleep(r),
-    };
-
     RUNTIME.spawn(async move {
-        let response = task().await;
+        use Request_oneof_async_req::*;
+        let response = match req.async_req.expect("no async req") {
+            sleep(r) => handle_sleep(r).await,
+            async_backtrace(r) => handle_backtrace(r).await,
+        };
 
         let mut response_buf = Vec::with_capacity(response.compute_size() as usize + 1);
         response.write_to_vec(&mut response_buf).unwrap();

@@ -10,6 +10,7 @@ name = "rust"
 crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
+backtrace = "0.3.60"
 lazy_static = "1.4.0"
 protobuf = "2.24.1"
 tokio = { version="1.7.1", features=["rt-multi-thread", "time"] }

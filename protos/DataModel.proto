@@ -1,17 +1,28 @@
 syntax = "proto3";
 
 message Request {
-  oneof sync_req { GreetingRequest greeting = 1; }
-  oneof async_req { SleepRequest sleep = 2; }
+  oneof sync_req {
+    GreetingRequest greeting = 1;
+    BacktraceRequest sync_backtrace = 3;
+  }
+  oneof async_req {
+    SleepRequest sleep = 2;
+    BacktraceRequest async_backtrace = 4;
+  }
 }
+
+// sync
 
 message GreetingRequest {
   string verb = 1;
   string name = 2;
 }
-
-message SleepRequest { uint64 millis = 1; }
-
 message GreetingResponse { string text = 1; }
 
+// async
+
+message SleepRequest { uint64 millis = 1; }
 message SleepResponse { string text = 1; }
+
+message BacktraceRequest {}
+message BacktraceResponse { string text = 1; }
