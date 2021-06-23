@@ -10,7 +10,9 @@ name = "rust"
 crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
+lazy_static = "1.4.0"
 protobuf = "2.24.1"
+tokio = { version="1.7.1", features=["rt-multi-thread", "time"] }
 
 [build-dependencies]
 cbindgen = "0.19.0"

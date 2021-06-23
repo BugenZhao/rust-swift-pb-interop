@@ -1,7 +1,8 @@
 syntax = "proto3";
 
 message Request {
-  oneof request { GreetingRequest greeting = 1; }
+  oneof sync_req { GreetingRequest greeting = 1; }
+  oneof async_req { SleepRequest sleep = 2; }
 }
 
 message GreetingRequest {
@@ -9,4 +10,8 @@ message GreetingRequest {
   string name = 2;
 }
 
+message SleepRequest { uint64 millis = 1; }
+
 message GreetingResponse { string text = 1; }
+
+message SleepResponse { string text = 1; }
