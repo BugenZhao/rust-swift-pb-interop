@@ -7,7 +7,7 @@ edition = "2018"
 
 [lib]
 name = "rust"
-crate-type = ["staticlib", "cdylib"]
+crate-type = ["staticlib"]
 
 [dependencies]
 backtrace = "0.3.60"

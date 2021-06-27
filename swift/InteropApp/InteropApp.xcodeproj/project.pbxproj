@@ -12,8 +12,6 @@
 		B43903482682E487007ED1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43903472682E487007ED1C9 /* Assets.xcassets */; };
 		B439034B2682E487007ED1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B439034A2682E487007ED1C9 /* Preview Assets.xcassets */; };
 		B43903572682E488007ED1C9 /* InteropAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903562682E488007ED1C9 /* InteropAppTests.swift */; };
-		B43903622682E488007ED1C9 /* InteropAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903612682E488007ED1C9 /* InteropAppUITests.swift */; };
-		B43903712682E4E2007ED1C9 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43903702682E4AF007ED1C9 /* librust.a */; };
 		B43903732682EE4C007ED1C9 /* DataModel.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903722682EE4C007ED1C9 /* DataModel.pb.swift */; };
 		B43903762682EF49007ED1C9 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = B43903752682EF49007ED1C9 /* SwiftProtobuf */; };
 		B4390378268301EF007ED1C9 /* RustCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390377268301EF007ED1C9 /* RustCall.swift */; };
@@ -21,6 +19,16 @@
 		B439037C26834D15007ED1C9 /* RustCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390377268301EF007ED1C9 /* RustCall.swift */; };
 		B439037D26834D3D007ED1C9 /* DataModel.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903722682EE4C007ED1C9 /* DataModel.pb.swift */; };
 		B439037E26834D5E007ED1C9 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43903702682E4AF007ED1C9 /* librust.a */; };
+		B4C0248D268835F200E53554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C0248C268835F200E53554 /* Assets.xcassets */; };
+		B4C02490268835F200E53554 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C0248F268835F200E53554 /* Preview Assets.xcassets */; };
+		B4C0249B268835F300E53554 /* InteropAppiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0249A268835F300E53554 /* InteropAppiOSTests.swift */; };
+		B4C024B12688367300E53554 /* RustCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4390377268301EF007ED1C9 /* RustCall.swift */; };
+		B4C024B22688367300E53554 /* DataModel.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903722682EE4C007ED1C9 /* DataModel.pb.swift */; };
+		B4C024B32688367300E53554 /* InteropAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903432682E485007ED1C9 /* InteropAppApp.swift */; };
+		B4C024B42688367300E53554 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43903452682E485007ED1C9 /* ContentView.swift */; };
+		B4C024B6268836C700E53554 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = B4C024B5268836C700E53554 /* SwiftProtobuf */; };
+		B4C024B82688376900E53554 /* librustmacos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C024B72688375F00E53554 /* librustmacos.a */; };
+		B4C024BA2688378500E53554 /* librustios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C024B92688377C00E53554 /* librustios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +39,12 @@
 			remoteGlobalIDString = B439033F2682E485007ED1C9;
 			remoteInfo = InteropApp;
 		};
-		B439035E2682E488007ED1C9 /* PBXContainerItemProxy */ = {
+		B4C02497268835F300E53554 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B43903382682E485007ED1C9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B439033F2682E485007ED1C9;
-			remoteInfo = InteropApp;
+			remoteGlobalIDString = B4C02485268835F100E53554;
+			remoteInfo = InteropAppiOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,13 +59,19 @@
 		B43903522682E488007ED1C9 /* InteropAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteropAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43903562682E488007ED1C9 /* InteropAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteropAppTests.swift; sourceTree = "<group>"; };
 		B43903582682E488007ED1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B439035D2682E488007ED1C9 /* InteropAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteropAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B43903612682E488007ED1C9 /* InteropAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteropAppUITests.swift; sourceTree = "<group>"; };
-		B43903632682E488007ED1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B43903702682E4AF007ED1C9 /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust.a; path = ../../out/libs/librust.a; sourceTree = "<group>"; };
 		B43903722682EE4C007ED1C9 /* DataModel.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.pb.swift; sourceTree = "<group>"; };
 		B4390377268301EF007ED1C9 /* RustCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustCall.swift; sourceTree = "<group>"; };
 		B439037A26834C90007ED1C9 /* RustCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustCallTests.swift; sourceTree = "<group>"; };
+		B4C02486268835F100E53554 /* InteropAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteropAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C0248C268835F200E53554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4C0248F268835F200E53554 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4C02491268835F200E53554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4C02496268835F200E53554 /* InteropAppiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteropAppiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C0249A268835F300E53554 /* InteropAppiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteropAppiOSTests.swift; sourceTree = "<group>"; };
+		B4C0249C268835F300E53554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4C024B72688375F00E53554 /* librustmacos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustmacos.a; path = ../../out/libs/librustmacos.a; sourceTree = "<group>"; };
+		B4C024B92688377C00E53554 /* librustios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librustios.a; path = ../../out/libs/librustios.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43903712682E4E2007ED1C9 /* librust.a in Frameworks */,
 				B43903762682EF49007ED1C9 /* SwiftProtobuf in Frameworks */,
+				B4C024B82688376900E53554 /* librustmacos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +92,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B439035A2682E488007ED1C9 /* Frameworks */ = {
+		B4C02483268835F100E53554 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C024B6268836C700E53554 /* SwiftProtobuf in Frameworks */,
+				B4C024BA2688378500E53554 /* librustios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C02493268835F200E53554 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +116,8 @@
 			children = (
 				B43903422682E485007ED1C9 /* InteropApp */,
 				B43903552682E488007ED1C9 /* InteropAppTests */,
-				B43903602682E488007ED1C9 /* InteropAppUITests */,
+				B4C02487268835F100E53554 /* InteropAppiOS */,
+				B4C02499268835F300E53554 /* InteropAppiOSTests */,
 				B43903412682E485007ED1C9 /* Products */,
 				B439036F2682E4AF007ED1C9 /* Frameworks */,
 			);
@@ -104,7 +128,8 @@
 			children = (
 				B43903402682E485007ED1C9 /* InteropApp.app */,
 				B43903522682E488007ED1C9 /* InteropAppTests.xctest */,
-				B439035D2682E488007ED1C9 /* InteropAppUITests.xctest */,
+				B4C02486268835F100E53554 /* InteropAppiOS.app */,
+				B4C02496268835F200E53554 /* InteropAppiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,21 +167,41 @@
 			path = InteropAppTests;
 			sourceTree = "<group>";
 		};
-		B43903602682E488007ED1C9 /* InteropAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B43903612682E488007ED1C9 /* InteropAppUITests.swift */,
-				B43903632682E488007ED1C9 /* Info.plist */,
-			);
-			path = InteropAppUITests;
-			sourceTree = "<group>";
-		};
 		B439036F2682E4AF007ED1C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4C024B92688377C00E53554 /* librustios.a */,
+				B4C024B72688375F00E53554 /* librustmacos.a */,
 				B43903702682E4AF007ED1C9 /* librust.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4C02487268835F100E53554 /* InteropAppiOS */ = {
+			isa = PBXGroup;
+			children = (
+				B4C0248C268835F200E53554 /* Assets.xcassets */,
+				B4C02491268835F200E53554 /* Info.plist */,
+				B4C0248E268835F200E53554 /* Preview Content */,
+			);
+			path = InteropAppiOS;
+			sourceTree = "<group>";
+		};
+		B4C0248E268835F200E53554 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B4C0248F268835F200E53554 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4C02499268835F300E53554 /* InteropAppiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4C0249A268835F300E53554 /* InteropAppiOSTests.swift */,
+				B4C0249C268835F300E53554 /* Info.plist */,
+			);
+			path = InteropAppiOSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,23 +246,43 @@
 			productReference = B43903522682E488007ED1C9 /* InteropAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B439035C2682E488007ED1C9 /* InteropAppUITests */ = {
+		B4C02485268835F100E53554 /* InteropAppiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B439036C2682E488007ED1C9 /* Build configuration list for PBXNativeTarget "InteropAppUITests" */;
+			buildConfigurationList = B4C024A8268835F300E53554 /* Build configuration list for PBXNativeTarget "InteropAppiOS" */;
 			buildPhases = (
-				B43903592682E488007ED1C9 /* Sources */,
-				B439035A2682E488007ED1C9 /* Frameworks */,
-				B439035B2682E488007ED1C9 /* Resources */,
+				B4C02482268835F100E53554 /* Sources */,
+				B4C02483268835F100E53554 /* Frameworks */,
+				B4C02484268835F100E53554 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B439035F2682E488007ED1C9 /* PBXTargetDependency */,
 			);
-			name = InteropAppUITests;
-			productName = InteropAppUITests;
-			productReference = B439035D2682E488007ED1C9 /* InteropAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = InteropAppiOS;
+			packageProductDependencies = (
+				B4C024B5268836C700E53554 /* SwiftProtobuf */,
+			);
+			productName = InteropAppiOS;
+			productReference = B4C02486268835F100E53554 /* InteropAppiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4C02495268835F200E53554 /* InteropAppiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4C024AB268835F300E53554 /* Build configuration list for PBXNativeTarget "InteropAppiOSTests" */;
+			buildPhases = (
+				B4C02492268835F200E53554 /* Sources */,
+				B4C02493268835F200E53554 /* Frameworks */,
+				B4C02494268835F200E53554 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4C02498268835F300E53554 /* PBXTargetDependency */,
+			);
+			name = InteropAppiOSTests;
+			productName = InteropAppiOSTests;
+			productReference = B4C02496268835F200E53554 /* InteropAppiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -235,9 +300,12 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = B439033F2682E485007ED1C9;
 					};
-					B439035C2682E488007ED1C9 = {
+					B4C02485268835F100E53554 = {
 						CreatedOnToolsVersion = 12.5;
-						TestTargetID = B439033F2682E485007ED1C9;
+					};
+					B4C02495268835F200E53554 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = B4C02485268835F100E53554;
 					};
 				};
 			};
@@ -259,7 +327,8 @@
 			targets = (
 				B439033F2682E485007ED1C9 /* InteropApp */,
 				B43903512682E488007ED1C9 /* InteropAppTests */,
-				B439035C2682E488007ED1C9 /* InteropAppUITests */,
+				B4C02485268835F100E53554 /* InteropAppiOS */,
+				B4C02495268835F200E53554 /* InteropAppiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,7 +350,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B439035B2682E488007ED1C9 /* Resources */ = {
+		B4C02484268835F100E53554 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C02490268835F200E53554 /* Preview Assets.xcassets in Resources */,
+				B4C0248D268835F200E53554 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C02494268835F200E53554 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,11 +412,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43903592682E488007ED1C9 /* Sources */ = {
+		B4C02482268835F100E53554 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43903622682E488007ED1C9 /* InteropAppUITests.swift in Sources */,
+				B4C024B42688367300E53554 /* ContentView.swift in Sources */,
+				B4C024B32688367300E53554 /* InteropAppApp.swift in Sources */,
+				B4C024B22688367300E53554 /* DataModel.pb.swift in Sources */,
+				B4C024B12688367300E53554 /* RustCall.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C02492268835F200E53554 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C0249B268835F300E53554 /* InteropAppiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +439,10 @@
 			target = B439033F2682E485007ED1C9 /* InteropApp */;
 			targetProxy = B43903532682E488007ED1C9 /* PBXContainerItemProxy */;
 		};
-		B439035F2682E488007ED1C9 /* PBXTargetDependency */ = {
+		B4C02498268835F300E53554 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B439033F2682E485007ED1C9 /* InteropApp */;
-			targetProxy = B439035E2682E488007ED1C9 /* PBXContainerItemProxy */;
+			target = B4C02485268835F100E53554 /* InteropAppiOS */;
+			targetProxy = B4C02497268835F300E53554 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,10 +561,10 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = ../../out/include/bindings.h;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -571,43 +660,99 @@
 			};
 			name = Release;
 		};
-		B439036D2682E488007ED1C9 /* Debug */ = {
+		B4C024A9268835F300E53554 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"InteropAppiOS/Preview Content\"";
 				DEVELOPMENT_TEAM = AHDHW7HK24;
-				INFOPLIST_FILE = InteropAppUITests/Info.plist;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = InteropAppiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = InteropApp;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B439036E2682E488007ED1C9 /* Release */ = {
+		B4C024AA268835F300E53554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"InteropAppiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = AHDHW7HK24;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = InteropAppiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4C024AC268835F300E53554 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AHDHW7HK24;
-				INFOPLIST_FILE = InteropAppUITests/Info.plist;
+				INFOPLIST_FILE = InteropAppiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = InteropApp;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InteropAppiOS.app/InteropAppiOS";
+			};
+			name = Debug;
+		};
+		B4C024AD268835F300E53554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AHDHW7HK24;
+				INFOPLIST_FILE = InteropAppiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugenzhao.InteropAppiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InteropAppiOS.app/InteropAppiOS";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -641,11 +786,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B439036C2682E488007ED1C9 /* Build configuration list for PBXNativeTarget "InteropAppUITests" */ = {
+		B4C024A8268835F300E53554 /* Build configuration list for PBXNativeTarget "InteropAppiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B439036D2682E488007ED1C9 /* Debug */,
-				B439036E2682E488007ED1C9 /* Release */,
+				B4C024A9268835F300E53554 /* Debug */,
+				B4C024AA268835F300E53554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4C024AB268835F300E53554 /* Build configuration list for PBXNativeTarget "InteropAppiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4C024AC268835F300E53554 /* Debug */,
+				B4C024AD268835F300E53554 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -665,6 +819,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		B43903752682EF49007ED1C9 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B43903742682EF49007ED1C9 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		B4C024B5268836C700E53554 /* SwiftProtobuf */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B43903742682EF49007ED1C9 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobuf;

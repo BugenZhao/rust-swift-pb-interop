@@ -12,7 +12,7 @@ struct RustError: Error {
     public let error: String
 }
 
-func extractByteBuffer(_ bb: ByteBuffer) -> (Data?, RustError?) {
+private func extractByteBuffer(_ bb: ByteBuffer) -> (Data?, RustError?) {
     var resError: RustError? = nil
     var resData: Data? = nil
 

@@ -46,58 +46,10 @@
             filePath = "InteropApp/RustCall.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "rustCall(_:)"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BFC1C30F-A89B-4B13-9509-5E1C781984BD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "InteropApp/RustCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "rustCall(_:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "BFC1C30F-A89B-4B13-9509-5E1C781984BD - bbd7e8bf5a52900a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "InteropApp.rustCall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftProtobuf.Message&gt;(InteropApp.Request) -&gt; &#x3c4;_0_0"
-                  moduleName = "InteropApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bugenzhao/Developer/Codes/rust-swift-pb-interop/swift/InteropApp/InteropApp/RustCall.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "1293">
-               </Location>
-               <Location
-                  uuid = "BFC1C30F-A89B-4B13-9509-5E1C781984BD - faeee2cd6c4167f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "$defer&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftProtobuf.Message&gt;() -&gt; ()"
-                  moduleName = "InteropApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bugenzhao/Developer/Codes/rust-swift-pb-interop/swift/InteropApp/InteropApp/RustCall.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "59">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

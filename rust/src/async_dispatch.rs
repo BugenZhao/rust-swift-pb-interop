@@ -5,7 +5,10 @@ use std::{ffi::c_void, mem, panic, thread};
 use tokio::runtime::Runtime;
 
 lazy_static! {
-    static ref RUNTIME: Runtime = Runtime::new().expect("failed to create tokio runtime");
+    static ref RUNTIME: Runtime = {
+        println!("rust: creating tokio runtime");
+        Runtime::new().expect("failed to create tokio runtime")
+    };
 }
 
 #[repr(C)]
