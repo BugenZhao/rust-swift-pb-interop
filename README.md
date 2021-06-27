@@ -55,6 +55,7 @@ message SleepResponse { string text = 1; }
 ```bash
 # prereqs
 $ brew install swift-protobuf
+$ cargo install cargo-lipo
 
 # build
 $ open swift/InteropApp/InteropApp.xcodeproj
